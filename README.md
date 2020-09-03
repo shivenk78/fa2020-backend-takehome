@@ -14,7 +14,6 @@ Questions, errors, or needed clarifications? Reach out here: `sirajsc2 [at] illi
 2. Write a function to process data from `data.csv` into a JSON structure as follows
 
 ```
-
 {
     employees: [
         {
@@ -25,7 +24,6 @@ Questions, errors, or needed clarifications? Reach out here: `sirajsc2 [at] illi
         ...
     ]
 }
-
 ```
 
 3. Return your processed data at a new endpoint located at `/api/fetch`
