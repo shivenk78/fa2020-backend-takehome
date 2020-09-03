@@ -71,7 +71,7 @@ def api_home():
 Scheme: http
 Filename: /api/fetch</code></pre>
         <h4>Response</h4>
-<pre><code>articles: [
+<pre><code>employees: [
             <br />  {
             <br />      name: <i>FULL NAME OF EMPLOYEE</i>,
             <br />      timezone: <i>TIMEZONE</i>,
