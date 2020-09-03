@@ -13,7 +13,7 @@ Questions, errors, or needed clarifications? Reach out here: `sirajsc2 [at] illi
 1. Fork this repository
 2. Write a function to process data from `data.csv` into a JSON structure as follows
 
-```json
+```
 
 {
     employees: [
