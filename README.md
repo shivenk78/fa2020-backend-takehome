@@ -34,7 +34,7 @@ Questions, errors, or needed clarifications? Reach out here: `sirajsc2 [at] illi
 1. Clone your fork of this repository
 2. Ensure you have a Python 3 environment to run this Flask server
 3. Install required packages by executing `pip3 install requirements.txt` OR `pip install requirements.txt` depending on your system installation of Python
-4. Save the following environment variable via `export FLASK_RUN=__init__.py` (macOS/Linux, environment variables are under Control Panel/System on Windows)
+4. Save the following environment variable via `export FLASK_RUN=__init__.py` (for macOS/Linux, environment variables are under Control Panel/System on Windows w/o WSL)
 5. Execute `flask run` in the repository to run a development server
 
 ## External Help
