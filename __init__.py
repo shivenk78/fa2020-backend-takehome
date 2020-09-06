@@ -1,6 +1,8 @@
 from flask import Flask, redirect
 
 import random
+import json
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -17,6 +19,11 @@ Implement an endpoint `/api/fetch` that returns the contents of `data.csv` as JS
 """
 
 # your work here
+
+@app.route("/api/fetch")
+def api_fetch():
+    data_file = pd.read_csv (r"data.csv")
+    return data_file.head().to_string()
 
 """
 
