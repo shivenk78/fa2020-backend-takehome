@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, jsonify
 
 import random
 import json
@@ -19,26 +19,24 @@ Implement an endpoint `/api/fetch` that returns the contents of `data.csv` as JS
 """
 
 # your work here
-
-class Employee:
-    def __init__(self, name, timezone, dept):
-        self.name = name
-        self.timezone = timezone
-        self.dept = dept
-
-
 @app.route("/api/fetch")
 def api_fetch():
     data_file = pd.read_csv (r"data.csv")
 
     employees = []
     for i in range(0,data_file.shape[0]):
-        full_name = data_file["first_name"][i] + data_file["last_name"][i]
+        full_name = data_file["first_name"][i] + " " + data_file["last_name"][i]
         timezone = data_file["time_zone"][i]
         dept = data_file["dept"][i]
-        employees.append(Employee(full_name, timezone, dept).__dict__)
 
-    return json.dumps(employees)
+        employee_dict = {
+            "name" : full_name,
+            "timezone": timezone,
+            "dept" : dept
+        }
+        employees.append(employee_dict)
+
+    return jsonify(employees=employees)
 """
 
 DOCUMENTATION WEBPAGE BELOW
